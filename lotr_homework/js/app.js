@@ -103,7 +103,7 @@ const keepItSecretKeepItSafe = () => {
 // Chapter 4
 // ============
 const makeBaddies = () => {
-$('#Mordor').append('<ul class="badGuyList"></ul>')
+  $('#Mordor').append('<ul class="badGuyList"></ul>');
   for(let i = 0; i < baddies.length; i++){
     $('.badGuyList').append(`<li class='baddy'>${baddies[i]}</li>`);
     console.log('test' + baddies[i]);
@@ -135,13 +135,10 @@ const makeBuddies = () => {
 // Chapter 6
 // ============
 const leaveTheShire = () => {
-
-  // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
-
-  // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
+  $('#The-Shire ul').children().appendTo('#Rivendell');
 };
-
+  // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+  // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
