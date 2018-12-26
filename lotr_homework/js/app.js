@@ -159,8 +159,8 @@ $('.buddy:nth-child(4)').text('Aragorn');
 const forgeTheFellowShip = () => {
   $('#middle-earth').append('<div id="the-fellowship"></div>');
   $('#the-fellowship').append(`<h1>The Fellowship</h1>`)
-  $('#Rivendell li').clone().appendTo('#the-fellowship');
-  $('ul .buddy').clone().appendTo('#the-fellowship');
+  $('#Rivendell li').appendTo('#the-fellowship');
+  $('ul .buddy').appendTo('#the-fellowship');
 };
   // 1. create a new div with an id 'the-fellowship'
   // 2. add an h1 with the text 'The Fellowship' to this new div
@@ -174,14 +174,13 @@ const forgeTheFellowShip = () => {
 // Chapter 9
 // ============
 const theBalrog = () => {
-
-  // 1. change the 'Gandalf' textNode to 'Gandalf the White'
-
-  // 2. add a class "the-white" to this element
-
-  // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
-
+  $('.buddy:first').text('Gandalf the White');
+  $('.buddy:first').addClass('the-white');
+  $('.the-white').css({"background-color": "white", "border": "grey solid 4px"});
 };
+  // 1. change the 'Gandalf' textNode to 'Gandalf the White'
+  // 2. add a class "the-white" to this element
+  // 3. in the style.css file, add a css rule to make elements of the class "the-white" have a white background and a grey border
 
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 9 complete - Updated Gandalf"
