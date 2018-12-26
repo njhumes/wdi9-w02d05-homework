@@ -207,6 +207,7 @@ const itsDangerousToGoAlone = () => {
   $('.hobbit:nth-child(2)').appendTo('#Mordor');
   $('#Mordor').append('<div class="mount-doom"></div>')
 };
+// Question - how to move Frodo and Sam at the same time? Couldnt figure out the nth-child(n) formula for selecting first 2
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
   // 2. add a div with an id of 'mount-doom' to Mordor
 // COMMIT YOUR WORK
@@ -230,15 +231,15 @@ const weWantsIt = () => {
 // Chapter 13
 // ============
 const thereAndBackAgain = () => {
+  $('#gollum').remove();
+  $('.badGuyList').remove();
+  $('.hobbit').appendTo('#The-Shire');
+};
+// Question - whats the differnce in removing .badGuyList vs removing .baddy?
 
   // 1. remove Gollum and the Ring from the DOM
-
   // 2. remove all the baddies from the DOM
-
   // 3. Move all the hobbits back to the shire
-
-};
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 13 complete -Gollum and the ring are gone, the baddies are done, and the hobbits are back in the shire".
 
